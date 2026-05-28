@@ -21,3 +21,6 @@ Es necesario contar con el entorno de ejecucion Node.js instalado en el sistema 
 1. Abrir la terminal y dirigirse al directorio del servidor:
    ```bash
    cd backend
+2.No olvidar usar los siguientes comandos : -npm install express axios cors dotenv
+   
+<img width="1456" height="979" alt="image" src="https://github.com/user-attachments/assets/e15864b0-bc8c-41b8-940c-4a2eec031d47" />
