@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTT DATA - Talent Management Pool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-section">
+                <div class="logo-placeholder">ntt<span class="logo-bold">data</span></div>
+                <div class="brand-divider"></div>
+                <div>
+                    <h1>Talent Management Pool</h1>
+                    <p>Prueba Técnica Conectada a Servicio Core REST</p>
+                </div>
+            </div>
+            <button id="btn-load" class="btn">Actualizar Lista</button>
+        </header>
+
+        <section class="toolbar">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Buscar por nombre, correo o ubicación...">
+            </div>
+            
+            <div class="filter-box">
+                <select id="lifecycle-filter">
+                    <option value="todos">Todas las etapas de vida</option>
+                    <option value="Universitario / Joven">Universitario / Joven (18-25)</option>
+                    <option value="Adulto Joven">Adulto Joven (26-40)</option>
+                    <option value="Adulto Pleno">Adulto Pleno (41-60)</option>
+                    <option value="Adulto Mayor">Adulto Mayor (60+)</option>
+                </select>
+            </div>
+        </section>
+
+        <main>
+            <div id="loading" class="loading">Sincronizando registros con el servidor...</div>
+            <div class="table-container">
+                <table id="users-table" class="hidden">
+                    <thead>
+                        <tr>
+                            <th>Colaborador</th>
+                            <th>Género</th>
+                            <th>Etapa de Vida (Edad)</th>
+                            <th>Ubicación</th>
+                            <th>Correo Electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

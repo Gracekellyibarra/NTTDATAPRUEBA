@@ -1,0 +1,240 @@
+:root {
+    --ntt-blue: #002d62;
+    --ntt-light-blue: #0072ce;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Sección de la Marca NTT Data */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-placeholder {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--ntt-blue);
+    letter-spacing: -1px;
+}
+
+.logo-bold {
+    font-weight: 700;
+    color: var(--ntt-light-blue);
+}
+
+.brand-divider {
+    width: 2px;
+    height: 40px;
+    background-color: #cbd5e1;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+header p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Barra de Búsqueda */
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 16px;
+    max-width: 400px;
+    transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+    border-color: var(--ntt-light-blue);
+    box-shadow: 0 0 0 3px rgba(0, 114, 206, 0.15);
+    background: white;
+}
+
+.search-icon {
+    margin-right: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.btn {
+    background: var(--ntt-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--ntt-light-blue);
+}
+
+/* Tabla con Cabecera Azul */
+.table-container {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid var(--ntt-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background-color: var(--ntt-blue);
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    padding: 16px 20px;
+}
+
+td {
+    padding: 16px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: var(--text-main);
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #cbd5e1;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.female {
+    background-color: #ffe4e6;
+    color: #e11d48;
+}
+
+.badge.male {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.email-link {
+    color: var(--ntt-light-blue);
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.hidden { display: none; }
+.loading { text-align: center; font-size: 15px; color: var(--text-muted); padding: 40px; }
+
+.toolbar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.filter-box select {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 14px;
+    color: var(--text-main);
+    outline: none;
+    cursor: pointer;
+}
+.filter-box select:focus {
+    border-color: var(--ntt-light-blue);
+}
